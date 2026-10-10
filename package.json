@@ -9,18 +9,28 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@better-auth/mongo-adapter": "^1.7.7",
+    "@tailwindcss/postcss": "^4.3.3",
+    "better-auth": "^1.7.7",
+    "lucide": "^1.53.0",
+    "mongodb": "^7.7.0",
     "next": "16.4.0",
+    "postcss": "^8.5.29",
     "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react-dom": "19.3.0",
+    "react-hot-toast": "^2.6.1",
+    "react-icons": "^5.7.0",
+    "react-toastify": "^11.1.0"
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "daisyui": "^5.7.47",
     "eslint": "^9",
     "eslint-config-next": "16.4.0",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.3.3",
     "typescript": "^5"
   }
 }
