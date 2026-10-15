@@ -2,7 +2,7 @@ import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { MongoClient } from "mongodb";
 
-const url = process.env.MONGODB_URI!;
+const uri = process.env.MONGODB_URI!;
 const globalForMongo = globalThis as unknown as {
   _mongoClient?: MongoClient;
 };
@@ -11,11 +11,11 @@ let client: MongoClient;
 
 if (process.env.NODE_ENV === "development") {
   if (!globalForMongo._mongoClient) {
-    globalForMongo._mongoClient = new MongoClient(url);
+    globalForMongo._mongoClient = new MongoClient(uri);
   }
   client = globalForMongo._mongoClient;
 } else {
-  client = new MongoClient(url);
+  client = new MongoClient(uri);
 }
 
 const db = client.db("bazardor");
