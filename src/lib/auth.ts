@@ -1,9 +1,8 @@
-// src/lib/auth.ts
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "@better-auth/mongo-adapter";
 import { MongoClient } from "mongodb";
 
-const url = process.env.MONGODB_URL!;
+const url = process.env.MONGODB_URI!;
 const globalForMongo = globalThis as unknown as {
   _mongoClient?: MongoClient;
 };
